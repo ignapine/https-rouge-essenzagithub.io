@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ROUGE — catálogo de skincare y belleza.">
+  <title>ROUGE — Skin Care</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <span>ROUGE</span>
+    <div class="topbar-contact">
+      <a href="https://www.instagram.com/rouge.essenza/" target="_blank" rel="noopener noreferrer">Instagram · @rouge.essenza</a>
+      <a href="https://wa.me/5491130049720" target="_blank" rel="noopener noreferrer">WhatsApp · +54 9 11 3004-9720</a>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="brand-mark">ROUGE</div>
+      <p class="eyebrow">SKIN CARE & BEAUTY</p>
+      <h1>Tu rutina, elevada.</h1>
+      <p class="hero-text">Descubrí el catálogo de productos de belleza de ROUGE.</p>
+      <div class="hero-contact">
+        <a href="https://www.instagram.com/rouge.essenza/" target="_blank" rel="noopener noreferrer">Instagram <strong>@rouge.essenza</strong></a>
+        <a href="https://wa.me/5491130049720" target="_blank" rel="noopener noreferrer">Consultas y pedidos <strong>+54 9 11 3004-9720</strong></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="order-notice" aria-label="Información sobre pedidos">
+      <div class="order-notice-icon">✦</div>
+      <div>
+        <p class="order-notice-title">Productos disponibles por encargo</p>
+        <p class="order-notice-text">Nuestros productos son importados y se gestionan exclusivamente por encargo. El plazo de entrega puede extenderse hasta <strong>14 días</strong>, según disponibilidad y tiempos de importación.</p>
+      </div>
+    </section>
+
+    <section class="toolbar" aria-label="Herramientas del catálogo">
+      <div class="search-wrap">
+        <label for="search" class="sr-only">Buscar producto</label>
+        <input id="search" type="search" placeholder="Buscar producto, marca o código..." autocomplete="off">
+        <span class="search-icon">⌕</span>
+      </div>
+
+      <div class="sort-wrap">
+        <label for="sort">Ordenar</label>
+        <select id="sort">
+          <option value="featured">Destacados</option>
+          <option value="name-asc">Nombre A–Z</option>
+          <option value="name-desc">Nombre Z–A</option>
+          <option value="price-asc">Precio menor</option>
+          <option value="price-desc">Precio mayor</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="category-strip" aria-label="Filtrar por marca">
+      <button class="category-chip active" data-category="TODOS">Todos</button>
+      <div id="category-list"></div>
+    </section>
+
+    <section class="summary-row">
+      <div>
+        <h2>Catálogo ROUGE</h2>
+        <p id="results-count">Cargando productos…</p>
+      </div>
+      <div class="catalog-rule"></div>
+    </section>
+
+    <section id="product-grid" class="product-grid" aria-live="polite"></section>
+
+    <div id="empty-state" class="empty-state hidden">
+      <div class="empty-icon">◌</div>
+      <h3>No encontramos ese producto</h3>
+      <p>Probá con otra palabra, marca o código.</p>
+      <button id="clear-search" class="button-outline">Limpiar búsqueda</button>
+    </div>
+  </main>
+
+  <button id="floating-cart" class="floating-cart" type="button" aria-label="Abrir mi pedido">
+    <span class="floating-cart-icon">🛍</span>
+    <span>Mi pedido</span>
+    <span id="floating-cart-count" class="cart-count">0</span>
+  </button>
+
+  <div id="cart-drawer" class="drawer hidden" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <div class="drawer-backdrop" data-close-cart="true"></div>
+    <aside class="drawer-panel">
+      <div class="drawer-head">
+        <div>
+          <p class="drawer-kicker">ROUGE</p>
+          <h2 id="cart-title">Mi pedido</h2>
+        </div>
+        <button class="modal-close" type="button" aria-label="Cerrar pedido" data-close-cart="true">×</button>
+      </div>
+      <div id="cart-items" class="cart-items"></div>
+      <div id="cart-empty" class="cart-empty">
+        <p>Tu pedido está vacío.</p>
+        <button id="cart-continue" class="button-outline" type="button">Seguir viendo productos</button>
+      </div>
+      <div id="cart-summary" class="cart-summary hidden">
+        <div class="cart-total-row"><span>Total</span><strong id="cart-total"></strong></div>
+        <p class="cart-delivery-note">Los productos son importados y se gestionan por encargo. El plazo de entrega puede ser de hasta 14 días.</p>
+        <button id="checkout-open" class="button-primary" type="button">Enviar pedido por WhatsApp</button>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-main">
+        <div class="footer-logo">ROUGE</div>
+        <p>Catálogo online de skin care & beauty</p>
+        <p class="footer-order">Todos nuestros productos son importados y se ofrecen por encargo. El plazo de entrega puede ser de hasta 14 días.</p>
+      </div>
+      <div class="footer-contact">
+        <h3>Contacto</h3>
+        <a href="https://www.instagram.com/rouge.essenza/" target="_blank" rel="noopener noreferrer">Instagram · @rouge.essenza</a>
+        <a href="https://wa.me/5491130049720" target="_blank" rel="noopener noreferrer">WhatsApp · +54 9 11 3004-9720</a>
+      </div>
+    </div>
+    <div class="footer-bottom">ROUGE · Gracias por elegirnos.</div>
+  </footer>
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
